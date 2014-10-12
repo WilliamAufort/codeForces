@@ -28,9 +28,6 @@ Write the needed number of flagstones.
 
 */
 
-// My answer ( accepted )
-
-
 #include <iostream>
 #include <sstream>
 #include <cstdlib>

@@ -71,12 +71,12 @@ int main ( int argc, char * argv[] ) {
       int score = stringToInt(mot);
       if (scores.find(name) != scores.end()) {
           scores[name] += score ;
-          std::cout << name << " modifie : new score : " << scores[name] << std::endl ;
+          std::cout << name << " modified. New score : " << scores[name] << std::endl ;
       }
       else {
           scores.insert(std::pair<std::string,int>(name,score)) ;
-          std::cout << name << " insere : score : " << scores[name] << std::endl ;
-      }
+          std::cout << name << " inserted. Score : " << scores[name] << std::endl ;
+      }	
   }
   std::string winner = (scores.begin())->first ;
   int maxScore = (scores.begin())->second ;
