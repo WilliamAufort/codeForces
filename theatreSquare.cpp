@@ -34,36 +34,38 @@ Write the needed number of flagstones.
 #include <string>
 #include <vector>
 
+using namespace std;
+
 // Convert string to int
 
-long long int stringToInt( std::string word ) {
+long long int stringToInt( string word ) {
   long long int number ;
-  std::istringstream(word) >> number ; 
+  istringstream(word) >> number ; 
   return number ;
 }
 
 int main ( int argc, char * argv[] ) {
   // read numbers 
-  std::string ligne;
-  getline(std::cin,ligne);
-  std::istringstream iss(ligne);
-  std::string mot;
+  string ligne;
+  getline(cin,ligne);
+  istringstream iss(ligne);
+  string mot;
   int compteur = 0 ;
-  std::vector<long long int> datas ;
+  vector<long long int> datas ;
   while( iss >> mot ) {
       datas.push_back(stringToInt(mot));
       compteur++ ;
   }
   // need 3 numbers
   if (compteur != 3) { 
-      std::cerr << " Not the good number of arguments : need n , m, a " << std::endl ;
+      cerr << " Not the good number of arguments : need n , m, a " << endl ;
       return -1  ;
   }
   long long int n = datas[0] ;
   long long int m = datas[1] ;
   long long int a = datas[2] ;
   // Calculations 
-  std::cout << (((n-1)/a)+1)*(((m-1)/a)+1) << std::endl ;
+  cout << (((n-1)/a)+1)*(((m-1)/a)+1) << endl ;
   return 0 ;
 }
 

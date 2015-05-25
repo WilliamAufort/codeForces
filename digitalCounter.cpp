@@ -1,6 +1,6 @@
 /****************************************\
 | A. Digital Counter					 |
-| time limit per test :1 second			 |
+| time limit per test : 1 second		 |
 | memory limit per test : 256 megabytes  |
 | input : standard input				 |
 | output : standard output				 |
